@@ -1,0 +1,34 @@
+d8_demo_2.static_content:
+  path: '/static-content'
+  defaults:
+    _controller: '\Drupal\d8_demo_2\Controller\D8DemoController::staticContent'
+  requirements:
+    #_permission: 'access training content'
+    _user_is_logged_in: 'TRUE'
+
+
+d8_demo_2.dynamic_content:
+  path: '/dynamic-content/{arg}'
+  defaults:
+    _controller: '\Drupal\d8_demo_2\Controller\D8DemoController::dynamicContent'
+    arg: 1
+  requirements:
+    _permission: 'access content'
+    #_node_creator_check: 'TRUE'
+
+d8_demo_2.entity:
+  path: '/list/{node1}/{node2}'
+  defaults: 
+    _controller: '\Drupal\d8_demo_2\Controller\D8DemoController::dynamicNode'
+    node1: 1
+    node2: 2
+  requirements:
+    #_permission: 'access content'
+    #_node_creator_check: 'TRUE'
+    _custom_access: '\Drupal\d8_demo_2\Controller\D8DemoController::nodeCreatorCheck'
+  options:
+    parameters:
+      node1: 
+        type: entity:node
+      node2: 
+        type: entity:node

@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains dummy.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dummy_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dummy module.
+    case 'help.page.dummy':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('first drupalconsole module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dummy_theme() {
+  return [
+    'dummy' => [
+      'template' => 'dummy',
+      'render element' => 'children',
+    ],
+  ];
+}

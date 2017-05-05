@@ -1,0 +1,9 @@
+d8_demo_2.tab1:
+  title: 'Action tab 1'
+  route_name: d8_demo_2.static_content
+  base_route: d8_demo_2.tab1
+
+d8_demo_2.tab2: 
+  title: 'Action Tab 2'
+  route_name: d8_demo_2.dynamic_content
+  base_route: d8_demo_2.tab1

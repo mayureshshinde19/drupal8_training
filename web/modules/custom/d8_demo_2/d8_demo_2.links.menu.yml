@@ -1,0 +1,5 @@
+d8_demo_2.static_menu_link:
+  title: 'Static Content'
+  description: 'renders demo static content'
+  route_name: d8_demo_2.static_content
+  parent: system.admin_config_system
