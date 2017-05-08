@@ -32,3 +32,34 @@ d8_demo_2.entity:
         type: entity:node
       node2: 
         type: entity:node
+        
+d8_demo_2.form:
+  path: '/simple-form'
+  defaults:
+    _form: '\Drupal\d8_demo_2\Form\SimpleForm'
+  requirements:
+    _permission: 'access content'
+d8_demo_2.form2:
+  path: '/second-form'
+  defaults:
+    _form: '\Drupal\d8_demo_2\Form\SecondForm'
+  requirements:
+    _permission: 'access content'
+    
+     
+d8_demo_2.misc_form:
+  path: '/d8_demo_2/form/misc'
+  defaults:
+    _form: '\Drupal\d8_demo_2\Form\MiscForm'
+    _title: 'MiscForm'
+  requirements:
+    _access: 'TRUE'
+    
+d8_demo_2.new_form:
+  path: '/weather-config'
+  defaults:
+    _form: '\Drupal\d8_demo_2\Form\NewForm'
+    _title: 'New Config Form'
+  requirements:
+    _access: 'TRUE'
+  

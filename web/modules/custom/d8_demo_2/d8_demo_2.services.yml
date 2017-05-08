@@ -4,3 +4,18 @@ services:
     arguments: ['@current_user']
     tags:
       - { name: 'access_check', applies_to: '_node_creator_check' }
+      
+  d8_demo_2.dbwrapper:
+    class: Drupal\d8_demo_2\DbWrapper
+    arguments: ['@database']
+  
+  d8_demo_2.weatherconfig:
+    class: Drupal\d8_demo_2\WeatherConfig
+    arguments: ['@config.factory','@http_client']
+    
+  d8_demo_2.event_subscriber:
+    class: Drupal\d8_demo_2\EventSubscriber\AccessHeaderInjector
+    tags:
+      - { name: 'event_subscriber' }
+    
+    

@@ -1,0 +1,9 @@
+Hello! this is my first twig file!
+{{ kint(weather_data) }}
+
+<div class="weather-widget-wrapper">
+  Min Temp.: {{ weather_data.main.temp_min }}
+  Max Temp.: {{ weather_data.main.temp_max }}
+  Pressure: {{ weather_data.main.pressure }}
+  Wind Speed: {{ weather_data.wind.speed }}
+</div>

@@ -1,0 +1,6 @@
+weather-widget: 
+  css:
+    theme:
+      assets/css/weather-widget.css {}
+  jss:
+    assets/js/weather-widget.js {}
