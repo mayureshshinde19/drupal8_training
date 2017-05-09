@@ -1,0 +1,38 @@
+name: d8_custom_theme
+type: theme
+description: This is d8 custom theme for training
+package: Custom
+core: 8.x
+libraries:
+  - d8_custom_theme/global-styling
+
+base theme: bartik
+
+regions:
+  header: Header
+  left_sidebar: Left Sidebar
+  content: Content
+  right_sidebar: Right Sidebar
+  footer: Footer
+
+libraries-override:
+  d8_demo_2/weather-widget:
+    css:
+      theme:
+        assets/css/weather-widget.css: assets/css/weather-widget.css
+      
+  d8_demo_2/weather-widget:
+    js:
+      assets/js/weather.js: {}
+    dependencies:
+      - core/jquery
+      - core/drupalSettings
+  
+  libraries-extend:
+    d8_demo_2/weather-widget:
+      css:
+       theme:
+         assets/css/weather-widget.css: {}
+  
+      
+  

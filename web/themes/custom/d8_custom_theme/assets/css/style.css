@@ -1,0 +1,13 @@
+body {
+	background-color: #00e5ff;
+}
+
+.region {
+	border: 1px solid #4f4f4f;
+}
+
+.page-content {
+	display: flex;
+	flex-direction: row;
+}
+

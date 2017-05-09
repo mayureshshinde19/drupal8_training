@@ -17,5 +17,10 @@ services:
     class: Drupal\d8_demo_2\EventSubscriber\AccessHeaderInjector
     tags:
       - { name: 'event_subscriber' }
+      
+  d8_demo_2.weatherconfigevent:
+    class: Drupal\d8_demo_2\EventSubscriber\WeatherConfigCustomEvent
+    tags:
+      - { name: 'event_subscriber' }
     
     
